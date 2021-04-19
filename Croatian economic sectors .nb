@@ -1,0 +1,63 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+BoxData[RowBox[{" ",RowBox[{"Chr"," ","="," ",RowBox[
+{"CountryData","[",RowBox[{"\"Croatia\"",","," ","\"GDPSectorFractions\""}],"]"}]}]}]],
+"Input",CellLabel -> "In[17]:= ",ExpressionUUID -> "df85ae7f-8441-4636-9f61-3ffb74c6ba19"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"\"AgriculturalValueAdded\"","\[Rule]","0.06435026909927903`"}],",",RowBox[
+{"\"ConstructionValueAdded\"","\[Rule]","0.0834681650475578`"}],",",RowBox[{"\"IndustrialValueAdded\"","\[Rule]","0.2022577260264699`"}],",",RowBox[
+{"\"MiscellaneousValueAdded\"","\[Rule]","0.39810784280540235`"}],",",RowBox[{"\"TradeValueAdded\"","\[Rule]","0.16556544697559492`"}],",",RowBox[
+{"\"TransportationValueAdded\"","\[Rule]","0.0862471651491047`"}]}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[17]= ",ExpressionUUID -> "aa2facf3-3c26-412d-a639-485eb9247c9c"]},
+Open],ExpressionUUID -> "be174513-8c8d-4b40-aeec-abcf5e733785"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"a","="," ",RowBox[{"Table","[",RowBox[{RowBox[{"{",RowBox[
+{"Chr","[",RowBox[{"[","i","]"}],"]"}],"}"}],",",RowBox[{"{",RowBox[{"i",",","1",",",RowBox[
+{"Length","[","Chr","]"}]}],"}"}]}],"]"}]}]],"Input",CellLabel -> "In[18]:= ",ExpressionUUID -> "47613704-49e5-4aba-84c8-48f6be9b6228"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"\"AgriculturalValueAdded\"","\[Rule]","0.06435026909927903`"}],"}"}],",",RowBox[
+{"{",RowBox[{"\"ConstructionValueAdded\"","\[Rule]","0.0834681650475578`"}],"}"}],",",RowBox[
+{"{",RowBox[{"\"IndustrialValueAdded\"","\[Rule]","0.2022577260264699`"}],"}"}],",",RowBox[
+{"{",RowBox[{"\"MiscellaneousValueAdded\"","\[Rule]","0.39810784280540235`"}],"}"}],",",RowBox[
+{"{",RowBox[{"\"TradeValueAdded\"","\[Rule]","0.16556544697559492`"}],"}"}],",",RowBox[
+{"{",RowBox[{"\"TransportationValueAdded\"","\[Rule]","0.0862471651491047`"}],"}"}]}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[18]= ",ExpressionUUID -> "1eb0a89e-5a39-415b-ad0d-5219058edb7d"]},
+Open],ExpressionUUID -> "6ce2af18-6ed1-4d33-b359-a24e1c3fdfc8"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"lista1"," ","="," ",RowBox[{"Sort","[",RowBox[{RowBox[{"Round","[",RowBox[
+{RowBox[{"100","*",RowBox[{"a","[",RowBox[{"[",RowBox[{"All",","," ","1",",","2"}],"]"}],"]"}]}],",","0.01"}],"]"}],",","Greater"}],"]"}]}]],
+"Input",CellLabel -> "In[19]:= ",ExpressionUUID -> "2ce7c9b7-218a-45d0-a9b2-aabcc3ec032a"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"39.81`",",","20.23`",",","16.56`",",","8.620000000000001`",",","8.35`",",","6.44`"}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[19]= ",ExpressionUUID -> "57f1a0f8-a6d7-47d5-8e54-a573424b2015"]},
+Open],ExpressionUUID -> "173f9a1f-6ee1-499f-9625-ed54c4553840"],Cell[
+BoxData[RowBox[
+{RowBox[{"a"," ","="," ",RowBox[{"Table","[",RowBox[{RowBox[{"BarChart","[",RowBox[
+{RowBox[{"Append"," ","[",RowBox[{RowBox[{RowBox[{"Part","[",RowBox[{"lista1",",",RowBox[
+{"2",";;",RowBox[{"Length","[","lista1","]"}]}]}],"]"}],"*",RowBox[{"t","/","20"}]}],",",RowBox[
+{"79.62","-",RowBox[{RowBox[{"Part","[",RowBox[{"lista1",",","1"}],"]"}],"*",RowBox[
+{"t","/","20"}]}]}]}],"]"}],","," ",RowBox[{"PlotRange","\[Rule]"," ",RowBox[{"{",RowBox[
+{"Automatic",",",RowBox[{"{",RowBox[{"0",",","43"}],"}"}]}],"}"}]}],","," ",RowBox[
+{"ChartLabels"," ","\[Rule]"," ","\n","  ",RowBox[{"Placed","[",RowBox[{RowBox[{"Append"," ","[",RowBox[
+{RowBox[{"Part","[",RowBox[{"lista1",",",RowBox[{"2",";;",RowBox[{"Length","[","lista1","]"}]}]}],"]"}],",",RowBox[
+{"Part","[",RowBox[{"lista1",",","1"}],"]"}]}],"]"}],","," ","Above",","," ",RowBox[
+{RowBox[{"Rotate","[",RowBox[{"#",",",RowBox[{RowBox[{"(",RowBox[{"90","-",RowBox[
+{RowBox[{"(",RowBox[{"90","*","t"}],")"}],"/","20"}]}],")"}]," ","Degree"}]}],"]"}]," ","&"}]}],"]"}]}],",",RowBox[
+{"ChartStyle"," ","\[Rule]",RowBox[{"{",RowBox[{"Red",","," ","Green",","," ","Yellow",",","Pink",",","Blue",",","Gray"}],"}"}]}],","," ",RowBox[
+{"ChartLegends"," ","\[Rule]",RowBox[{"{",RowBox[{"\"Przemys\[LSlash]\"",",","\"Handel\"",",","\"Transport\"",",","\"Budowa\"",",","\"Rolnictwo\"",",","\"Inne\""}],"}"}]}],",",RowBox[
+{"PlotLabel"," ","\[Rule]"," ","\"Sektory Gospodarki Chorwacji\""}]," ",",",RowBox[
+{"AxesLabel"," ","\[Rule]",RowBox[{"(",RowBox[{"Style","[",RowBox[{"\"%\"",",","Larger"}],"]"}],")"}]}]}],"]"}],",",RowBox[
+{"{",RowBox[{"t",",","0",",","20"}],"}"}]}],"]"}]}],";"}]],"Input",CellLabel -> "In[21]:= ",
+ExpressionUUID -> "36cbcd36-bda5-4bd3-b1ed-bc9dca119c8a"],Cell[
+CellGroupData[{Cell[
+BoxData[
+RowBox[{"CloudExport","[",RowBox[{"a",",","\"gif\""}],"]"}]],"Input",CellLabel -> "In[22]:= ",
+ExpressionUUID -> "7cf7dd2a-a8ad-4768-9854-301aeb257f8b"],Cell[
+BoxData[InterpretationBox[
+RowBox[{"CloudObject","[",TemplateBox[{"\"https://www.wolframcloud.com/obj/761c43f9-9516-46aa-a29f-b8c14de9c27f\"","https://www.wolframcloud.com/obj/761c43f9-9516-46aa-a29f-b8c14de9c27f"},
+"HyperlinkURL"],"]"}],CloudObject["https://www.wolframcloud.com/obj/761c43f9-9516-46aa-a29f-b8c14de9c27f"],
+SelectWithContents -> True],StandardForm],"Output",CellLabel -> "Out[22]= ",ExpressionUUID -> "54cec1a3-bc25-4b4c-856a-053efe034bad"]},
+Open],ExpressionUUID -> "2f7064ba-2155-406d-a7c6-d2483ea987b1"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "12.1 for Wolfram Cloud 1.56 (September 30, 2020)"]
